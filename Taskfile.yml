@@ -1,0 +1,26 @@
+# https://taskfile.dev
+
+version: '3'
+
+tasks:
+  fmt:
+    cmds:
+      - gofmt -l -w .
+  vet:
+    cmds:
+      - go vet ./...
+  test:
+    cmds:
+      - go test ./...
+  check:
+    desc: "fmt + vet + test"
+    cmds:
+      - task: fmt
+      - task: vet
+      - task: test
+  deps:tidy:
+    cmds:
+      - go mod tidy
+  clean:
+    cmds:
+      - go clean

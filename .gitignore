@@ -1,0 +1,6 @@
+*.test
+*.out
+.task
+.tp-release-comment
+task-plus.local.yaml
+.vscode/
